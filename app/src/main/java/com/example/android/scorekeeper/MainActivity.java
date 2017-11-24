@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity {
     // Tracks the score for Athlete B
     int scoreAthleteB = 0;
 
+    String winA = "A is the WINNER";
+
+    String winB = "B is the WINNER";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,50 +28,52 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Increase the score for Athlete A by 1 point.
+     * Ippon: Increase the score for Athlete A by 100 points and the game is over.
      */
-    public void addOneForAthleteA(View v) {
+    public void ipponForAthleteA(View v) {
+        scoreAthleteA = scoreAthleteA + 100;
+        displayForAthleteA(scoreAthleteA);
+        displayWinForAthlete(winA);
+    }
+
+    /**
+     * Waza-ari: Increase the score for Athlete A by 10 points.
+     */
+    public void wazaariForAthleteA(View v) {
+        scoreAthleteA = scoreAthleteA + 10;
+        displayForAthleteA(scoreAthleteA);
+    }
+
+    /**
+     * Yuko: Increase the score for Athlete A by 1 point.
+     */
+    public void yukoForAthleteA(View v) {
         scoreAthleteA = scoreAthleteA + 1;
         displayForAthleteA(scoreAthleteA);
     }
 
     /**
-     * Increase the score for Athlete A by 2 points.
+     * Ippon: Increase the score for Athlete B by 100 points and the game is over.
      */
-    public void addTwoForAthleteA(View v) {
-        scoreAthleteA = scoreAthleteA + 2;
-        displayForAthleteA(scoreAthleteA);
+    public void ipponForAthleteB(View v) {
+        scoreAthleteB = scoreAthleteB + 100;
+        displayForAthleteB(scoreAthleteB);
+        displayWinForAthlete(winB);
     }
 
     /**
-     * Increase the score for Athlete A by 3 points.
+     * Waza-ari: Increase the score for Athlete A by 10 points.
      */
-    public void addThreeForAthleteA(View v) {
-        scoreAthleteA = scoreAthleteA + 3;
-        displayForAthleteA(scoreAthleteA);
+    public void wazaariForAthleteB(View v) {
+        scoreAthleteB = scoreAthleteB + 10;
+        displayForAthleteB(scoreAthleteB);
     }
 
     /**
-     * Increase the score for Athlete B by 1 point.
+     * Yuko: Increase the score for Athlete A by 1 point.
      */
-    public void addOneForAthleteB(View v) {
+    public void yukoForAthleteB(View v) {
         scoreAthleteB = scoreAthleteB + 1;
-        displayForAthleteB(scoreAthleteB);
-    }
-
-    /**
-     * Increase the score for Athlete B by 2 points.
-     */
-    public void addTwoForAthleteB(View v) {
-        scoreAthleteB = scoreAthleteB + 2;
-        displayForAthleteB(scoreAthleteB);
-    }
-
-    /**
-     * Increase the score for Athlete B by 3 points.
-     */
-    public void addThreeForAthleteB(View v) {
-        scoreAthleteB = scoreAthleteB + 3;
         displayForAthleteB(scoreAthleteB);
     }
 
@@ -79,6 +85,8 @@ public class MainActivity extends AppCompatActivity {
         scoreAthleteB = 0;
         displayForAthleteA(scoreAthleteA);
         displayForAthleteB(scoreAthleteB);
+        TextView winnerView = (TextView) findViewById(R.id.winner_textview);
+        winnerView.setText("");
     }
 
     /**
@@ -96,4 +104,14 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.Athlete_b_score);
         scoreView.setText(String.valueOf(score));
     }
+
+    /**
+     * Displays the winner of the game.
+     */
+    public void displayWinForAthlete(String winner) {
+        TextView winnerView = (TextView) findViewById(R.id.winner_textview);
+        winnerView.setText(String.valueOf(winner));
+    }
+
+
 }
