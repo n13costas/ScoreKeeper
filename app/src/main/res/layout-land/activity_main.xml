@@ -94,7 +94,7 @@
                     android:layout_marginRight="24dp"
                     android:onClick="yukoForAthleteA"
                     android:text="@string/yuko"
-                    android:layout_marginTop="8dp"
+
                     />
 
                 <Button
@@ -186,7 +186,6 @@
                     android:layout_marginRight="24dp"
                     android:onClick="yukoForAthleteB"
                     android:text="@string/yuko"
-                    android:layout_marginTop="8dp"
                     />
 
                 <Button

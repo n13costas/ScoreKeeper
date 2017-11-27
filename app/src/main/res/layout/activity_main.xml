@@ -49,7 +49,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Athlete A"
+                android:text="@string/athlete_a"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:layout_marginTop="16dp"
@@ -131,7 +131,7 @@
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Athlete B"
+                android:text="@string/athlete_b"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="18sp"
                 android:layout_marginTop="16dp"/>
