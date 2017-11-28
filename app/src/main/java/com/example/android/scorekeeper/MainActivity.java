@@ -8,7 +8,13 @@ import android.view.View;
 import android.widget.TextView;
 
 
+
+
 public class MainActivity extends AppCompatActivity {
+
+    // Saves the scores of both athletes in case of changing activity
+    static final String STATE_SCORE_A = "athleteAScore";
+    static final String STATE_SCORE_B = "athleteBScore";
 
     // Tracks the score for Athlete A
     int scoreAthleteA = 0;
@@ -24,6 +30,25 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(STATE_SCORE_A, scoreAthleteA);
+        savedInstanceState.putInt(STATE_SCORE_B, scoreAthleteB);
+
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+
+
+        // Restore state members from saved instance
+        scoreAthleteA = savedInstanceState.getInt(STATE_SCORE_A);
+        scoreAthleteB = savedInstanceState.getInt(STATE_SCORE_B);
     }
 
 
