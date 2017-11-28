@@ -7,9 +7,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-
-
-
 public class MainActivity extends AppCompatActivity {
 
     // Saves the scores of both athletes in case of changing activity
@@ -22,14 +19,23 @@ public class MainActivity extends AppCompatActivity {
     // Tracks the score for Athlete B
     int scoreAthleteB = 0;
 
+    // Highlights the winner athlete
     String winA = "A is the WINNER";
-
     String winB = "B is the WINNER";
+
+    //Creates global textviews variables to save performance
+    private TextView scoreViewA;
+    private TextView scoreViewB;
+    private TextView winnerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        scoreViewA = (TextView) findViewById(R.id.Athlete_a_score);
+        scoreViewB = (TextView) findViewById(R.id.Athlete_b_score);
+        winnerView = (TextView) findViewById(R.id.winner_textview);
     }
 
     @Override
@@ -112,7 +118,6 @@ public class MainActivity extends AppCompatActivity {
         scoreAthleteB = 0;
         displayForAthleteA(scoreAthleteA);
         displayForAthleteB(scoreAthleteB);
-        TextView winnerView = (TextView) findViewById(R.id.winner_textview);
         winnerView.setText("");
     }
 
@@ -120,23 +125,20 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Athlete A.
      */
     public void displayForAthleteA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.Athlete_a_score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewA.setText(String.valueOf(score));
     }
 
     /**
      * Displays the given score for Athlete B.
      */
     public void displayForAthleteB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.Athlete_b_score);
-        scoreView.setText(String.valueOf(score));
+        scoreViewB.setText(String.valueOf(score));
     }
 
     /**
      * Displays the winner of the game.
      */
     public void displayWinForAthlete(String winner) {
-        TextView winnerView = (TextView) findViewById(R.id.winner_textview);
         winnerView.setText(String.valueOf(winner));
     }
 
