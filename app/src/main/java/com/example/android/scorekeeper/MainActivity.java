@@ -49,6 +49,8 @@ public class MainActivity extends AppCompatActivity {
         // Restore state members from saved instance
         scoreAthleteA = savedInstanceState.getInt(STATE_SCORE_A);
         scoreAthleteB = savedInstanceState.getInt(STATE_SCORE_B);
+        displayForAthleteA(scoreAthleteA);
+        displayForAthleteB(scoreAthleteB);
     }
 
 
