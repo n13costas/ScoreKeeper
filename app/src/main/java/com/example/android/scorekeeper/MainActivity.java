@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        scoreViewA = (TextView) findViewById(R.id.Athlete_a_score);
-        scoreViewB = (TextView) findViewById(R.id.Athlete_b_score);
+        scoreViewA = (TextView) findViewById(R.id.Athlete_a_score_textview);
+        scoreViewB = (TextView) findViewById(R.id.Athlete_b_score_textview);
         winnerView = (TextView) findViewById(R.id.winner_textview);
     }
 

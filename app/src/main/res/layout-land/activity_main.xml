@@ -57,13 +57,13 @@
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:padding="8dp"
-                    android:text="Athlete A"
+                    android:text="@string/athlete_a"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp"
                     android:layout_marginTop="-10dp"/>
 
                 <TextView
-                    android:id="@+id/Athlete_a_score"
+                    android:id="@+id/Athlete_a_score_textview"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
@@ -149,13 +149,13 @@
                     android:fontFamily="sans-serif-medium"
                     android:gravity="center"
                     android:padding="16dp"
-                    android:text="Athlete B"
+                    android:text="@string/athlete_b"
                     android:textColor="@color/colorPrimaryDark"
                     android:textSize="18sp"
                     android:layout_marginTop="-10dp"/>
 
                 <TextView
-                    android:id="@+id/Athlete_b_score"
+                    android:id="@+id/Athlete_b_score_textview"
                     android:layout_width="0dp"
                     android:layout_weight="1"
                     android:layout_height="wrap_content"
