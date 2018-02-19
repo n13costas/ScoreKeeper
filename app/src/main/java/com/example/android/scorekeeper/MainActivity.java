@@ -2,8 +2,6 @@ package com.example.android.scorekeeper;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
@@ -28,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     /**
-     * Ippon: Increase the score for Athlete A by 100 points and the game is over.
+     * Ippon: Increases the score for Athlete A by 100 points and the game is over.
      */
     public void ipponForAthleteA(View v) {
         scoreAthleteA = scoreAthleteA + 100;
@@ -37,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Waza-ari: Increase the score for Athlete A by 10 points.
+     * Waza-ari: Increases the score for Athlete A by 10 points.
      */
     public void wazaariForAthleteA(View v) {
         scoreAthleteA = scoreAthleteA + 10;
@@ -45,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Yuko: Increase the score for Athlete A by 1 point.
+     * Yuko: Increases the score for Athlete A by 1 point.
      */
     public void yukoForAthleteA(View v) {
         scoreAthleteA = scoreAthleteA + 1;
@@ -53,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Ippon: Increase the score for Athlete B by 100 points and the game is over.
+     * Ippon: Increases the score for Athlete B by 100 points and the game is over.
      */
     public void ipponForAthleteB(View v) {
         scoreAthleteB = scoreAthleteB + 100;
@@ -62,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Waza-ari: Increase the score for Athlete A by 10 points.
+     * Waza-ari: Increases the score for Athlete A by 10 points.
      */
     public void wazaariForAthleteB(View v) {
         scoreAthleteB = scoreAthleteB + 10;
@@ -70,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     /**
-     * Yuko: Increase the score for Athlete A by 1 point.
+     * Yuko: Increases the score for Athlete A by 1 point.
      */
     public void yukoForAthleteB(View v) {
         scoreAthleteB = scoreAthleteB + 1;
@@ -85,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
         scoreAthleteB = 0;
         displayForAthleteA(scoreAthleteA);
         displayForAthleteB(scoreAthleteB);
-        TextView winnerView = (TextView) findViewById(R.id.winner_textview);
+        TextView winnerView = findViewById(R.id.winner_textview);
         winnerView.setText("");
     }
 
@@ -93,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Athlete A.
      */
     public void displayForAthleteA(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.Athlete_a_score);
+        TextView scoreView = findViewById(R.id.Athlete_a_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -101,7 +99,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the given score for Athlete B.
      */
     public void displayForAthleteB(int score) {
-        TextView scoreView = (TextView) findViewById(R.id.Athlete_b_score);
+        TextView scoreView = findViewById(R.id.Athlete_b_score);
         scoreView.setText(String.valueOf(score));
     }
 
@@ -109,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
      * Displays the winner of the game.
      */
     public void displayWinForAthlete(String winner) {
-        TextView winnerView = (TextView) findViewById(R.id.winner_textview);
+        TextView winnerView = findViewById(R.id.winner_textview);
         winnerView.setText(String.valueOf(winner));
     }
 

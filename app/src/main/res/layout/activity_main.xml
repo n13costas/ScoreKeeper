@@ -9,23 +9,23 @@
     >
 
     <TextView
-        android:id="@+id/judo_text"
+        android:id="@+id/header_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="#bacef2"
         android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:padding="16dp"
-        android:text="JUDO World Championship"
-        android:textStyle="bold"
-        android:textColor="#616161"
+        android:text="@string/header"
+        android:textColor="@color/colorText"
         android:textSize="20sp"
-        android:background="#bacef2"/>
+        android:textStyle="bold" />
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
+        android:layout_below="@+id/header_text"
         android:background="@android:color/darker_gray"
-        android:layout_below="@+id/judo_text"
         />
 
     <LinearLayout
@@ -37,21 +37,21 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
             android:layout_weight="1"
             android:orientation="vertical"
-            android:layout_marginTop="48dp"
             >
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="Athlete A"
                 android:textColor="#616161"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/Athlete_a_score"
@@ -66,10 +66,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@drawable/white_uni"
                 android:backgroundTint="#80FFFFFF"
                 android:backgroundTintMode="src_over"
+                android:orientation="vertical"
                 android:padding="8dp"
                 >
 
@@ -80,9 +80,9 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
+                android:layout_marginTop="48dp"
                 android:onClick="yukoForAthleteA"
                 android:text="@string/yuko"
-                android:layout_marginTop="48dp"
                 />
 
             <Button
@@ -118,20 +118,20 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
             android:layout_weight="1"
-            android:orientation="vertical"
-            android:layout_marginTop="48dp">
+            android:orientation="vertical">
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
                 android:text="Athlete B"
                 android:textColor="#616161"
-                android:textSize="18sp"
-                android:layout_marginTop="16dp"/>
+                android:textSize="18sp" />
 
             <TextView
                 android:id="@+id/Athlete_b_score"
@@ -146,10 +146,10 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
                 android:background="@drawable/blue_uni"
                 android:backgroundTint="#80FFFFFF"
                 android:backgroundTintMode="src_over"
+                android:orientation="vertical"
                 android:padding="8dp"
                 >
 
@@ -160,9 +160,9 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="24dp"
                 android:layout_marginRight="24dp"
+                android:layout_marginTop="48dp"
                 android:onClick="yukoForAthleteB"
                 android:text="@string/yuko"
-                android:layout_marginTop="48dp"
                 />
 
             <Button
@@ -200,12 +200,12 @@
             android:id="@+id/winner_textview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text=""
-            android:textStyle="bold"
-            android:textSize="24sp"
-            android:textAlignment="center"
-            android:padding="16dp"
             android:layout_marginTop="8dp"
+            android:padding="16dp"
+            android:text=""
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold"
             />
 
     </LinearLayout>
@@ -216,9 +216,9 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:onClick="resetScore"
         android:text="Reset"
-        android:backgroundTint="@color/colorPrimaryDark"
         android:textColor="#fff"/>
 
 </RelativeLayout>
