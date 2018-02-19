@@ -13,12 +13,11 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#bacef2"
-        android:fontFamily="sans-serif-medium"
         android:gravity="center"
         android:padding="16dp"
         android:text="@string/header"
-        android:textColor="@color/colorText"
-        android:textSize="20sp"
+        android:textColor="@color/colorTextHeader"
+        android:textSize="@dimen/textHeader"
         android:textStyle="bold" />
 
     <View
@@ -46,10 +45,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Athlete A"
+                android:text="@string/athlete_a"
                 android:textColor="#616161"
                 android:textSize="18sp" />
 
@@ -57,9 +55,8 @@
                 android:id="@+id/Athlete_a_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="#000000"
                 android:textSize="48sp" />
 
@@ -126,10 +123,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
-                android:fontFamily="sans-serif-medium"
                 android:gravity="center"
                 android:padding="16dp"
-                android:text="Athlete B"
+                android:text="@string/athlete_b"
                 android:textColor="#616161"
                 android:textSize="18sp" />
 
@@ -137,9 +133,8 @@
                 android:id="@+id/Athlete_b_score"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="sans-serif-light"
                 android:gravity="center"
-                android:text="0"
+                android:text="@string/zero"
                 android:textColor="#000000"
                 android:textSize="48sp" />
 
@@ -150,7 +145,7 @@
                 android:backgroundTint="#80FFFFFF"
                 android:backgroundTintMode="src_over"
                 android:orientation="vertical"
-                android:padding="8dp"
+                android:padding="@dimen/spaceSmall"
                 >
 
             <Button
@@ -215,10 +210,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="@dimen/spaceLarge"
         android:backgroundTint="@color/colorPrimaryDark"
         android:onClick="resetScore"
-        android:text="Reset"
-        android:textColor="#fff"/>
+        android:text="@string/reset_button"
+        android:textColor="@color/colorTextWhite" />
 
 </RelativeLayout>

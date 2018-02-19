@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">ScoreKeeper</string>
-    <string name="header">Judo Championship</string>v
+    <string name="header">Judo Championship</string>
+    <string name="athlete_a">Athlete A</string>
+    <string name="athlete_b">Athlete B</string>
+    <string name="zero">0</string>
+    <string name="reset_button">Reset</string>
     <string name="yuko">Yuko</string>
     <string name="wazaari">Waza-ari</string>
     <string name="ippon">Ippon</string>
