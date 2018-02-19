@@ -5,23 +5,44 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
-
 public class MainActivity extends AppCompatActivity {
 
+    // Saves the scores of both athletes in case of changing activity
+    static final String STATE_SCORE_A = "athleteAScore";
+    static final String STATE_SCORE_B = "athleteBScore";
     // Tracks the score for Athlete A
     int scoreAthleteA = 0;
-
     // Tracks the score for Athlete B
     int scoreAthleteB = 0;
-
+    // Shows the winning message
     String winA = "A is the WINNER";
-
     String winB = "B is the WINNER";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+    }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        // Save the user's current game state
+        savedInstanceState.putInt(STATE_SCORE_A, scoreAthleteA);
+        savedInstanceState.putInt(STATE_SCORE_B, scoreAthleteB);
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
+    public void onRestoreInstanceState(Bundle savedInstanceState) {
+        // Always call the superclass so it can restore the view hierarchy
+        super.onRestoreInstanceState(savedInstanceState);
+
+        // Restore each athletes scores from saved instance
+        scoreAthleteA = savedInstanceState.getInt(STATE_SCORE_A);
+        scoreAthleteB = savedInstanceState.getInt(STATE_SCORE_B);
+
+        //Display again the saved scores
+        displayForAthleteA(scoreAthleteA);
+        displayForAthleteB(scoreAthleteB);
     }
 
 
@@ -110,6 +131,5 @@ public class MainActivity extends AppCompatActivity {
         TextView winnerView = findViewById(R.id.winner_textview);
         winnerView.setText(String.valueOf(winner));
     }
-
 
 }

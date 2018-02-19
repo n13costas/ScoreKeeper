@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="spaceZero">0dp</dimen>
+    <dimen name="spaceRibbon">1dp</dimen>
     <dimen name="spaceSmall">8dp</dimen>
     <dimen name="spaceMedium">16dp</dimen>
     <dimen name="spaceLarge">24dp</dimen>
+    <dimen name="spaceXLarge">48dp</dimen>
+    <dimen name="spaceRibbonTop">80dp</dimen>
     <dimen name="textHeader">18sp</dimen>
+    <dimen name="textScore">48sp</dimen>
     <dimen name="textButton">24sp</dimen>
 </resources>
